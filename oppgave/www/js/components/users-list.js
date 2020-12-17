@@ -46,13 +46,13 @@ class UsersList extends LitElement {
     return html`
       <div class="row">
         <div class="column">
-          <h2>Brukere</h2>
+          <h2>Registered users</h2>
           <ul>
             ${this.users.map(user => html`<li @click="${(e) => this.setSelectedUser(e, user)}">${user.uname}</li>`)}
           </ul>
         </div>
         <div class="column">
-          <h2>Rediger bruker</h2>
+          <h2>Edit users</h2>
           <edit-user .user="${this.selectedUser}"></edit-user>
         </div>
       </div>
